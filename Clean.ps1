@@ -8,6 +8,7 @@ Get-ChildItem "C:\Users" | ?{ $_.PSIsContainer }  | % {gci (Join-Path $_.FullNam
 Get-ChildItem "C:\Users" | ?{ $_.PSIsContainer }  | % {gci (Join-Path $_.FullName Videos) -Recurse} | %{Remove-Item $_.FullName -Verbose};
 Get-ChildItem "C:\Users" | ?{ $_.PSIsContainer }  | % {gci (Join-Path $_.FullName Pictures) -Recurse} | %{Remove-Item $_.FullName -Verbose};
 Get-ChildItem "C:\Users" | ?{ $_.PSIsContainer }  | % {gci (Join-Path $_.FullName Desktop) -Recurse} | %{Remove-Item $_.FullName -Verbose};
+ 
  del C:\Windows\Temp\*.*;
  del "C:\ProgramData\Package Cache\*.*";
  del "C:\Users\mobile\AppData\Local\Google\Chrome\User Data\Default\History" ;
@@ -29,7 +30,5 @@ Get-ChildItem "C:\Users" | ?{ $_.PSIsContainer }  | % {gci (Join-Path $_.FullNam
  del "C:\Users\mobile\AppData\Local\Google\Chrome\User Data\Default\PreferedApps" ;
  del "C:\Users\mobile\AppData\Local\Google\Chrome\User Data\Default\Visited Links" ;
  del C:\Users\mobile\AppData\Local\Temp\*.* 
-
-
 
  del 'C:\$Recycle.Bin';
